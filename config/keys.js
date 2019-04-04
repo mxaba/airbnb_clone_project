@@ -1,7 +1,7 @@
 module.exports = {
     google: {
-        clientID: '798701584187-pjfogdt5gjk1it4bsh1o0b25q1dkcg1i.apps.googleusercontent.com',
-        clientSecret: 'Z1Q707hwxNzSPVkAvDXc3qxs'
+        clientID: '685733215393-16cc9nr6unrb7qcgfoc059qg25d7o5ie.apps.googleusercontent.com',
+        clientSecret: 'fpFbsa4E7Mz5WpPpF5r8h7Li'
     },
     mongodb: {
         dbURI: 'mongodb+srv://mxaba:uozkifovRKJCBvXV@airbnbdb-yucsr.mongodb.net/test?retryWrites=true'

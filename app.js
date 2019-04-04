@@ -3,8 +3,11 @@ var path = require('path');
 var logger = require('morgan');
 const cookieSession = require('cookie-session')
 var index = require('./routes/index');
+var authRoutes = require('./routes/auth-routes');
+var profileRoutes = require('./routes/profile-routes');
 const keys = require('./config/keys');
 var passport = require('passport');
+var passportSetup = require('./config/passport');
 var mongoose = require('mongoose');
 var app = express();
 
@@ -24,7 +27,7 @@ app.use(passport.session());
 
 
 // connect to mongodb
-mongoose.connect(keys.mongodb.dbURI, () => {
+mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true }, () => {
     console.log('connected to mongodb');
 });
 
@@ -33,10 +36,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'models')));
 app.use(express.static(path.join(__dirname, 'config')));
 
-
-
 // routes
 app.use('/', index);
+app.use('/auth', authRoutes);
+app.use('/profile', profileRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
