@@ -24,6 +24,7 @@ passport.use(
         User.findOne({googleId: profile.id}).then((currentUser) => {
             if(currentUser){
                 // already have this user
+                console.log(profile._json.picture);
                 console.log('user is: ', currentUser);
                 done(null, currentUser);
             } else {
@@ -31,8 +32,9 @@ passport.use(
                 new User({
                     googleId: profile.id,
                     username: profile.displayName,
-                    thumbnail: profile._json.image.url
-                }).save().then((newUser) => {
+                    thumbnail: profile._json.picture
+                })
+                .save().then((newUser) => {
                     console.log('created new user: ', newUser);
                     done(null, newUser);
                 });
