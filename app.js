@@ -25,10 +25,12 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+var publicDir = require('path').join(__dirname,'');
+app.use(express.static(publicDir));
 // connect to mongodb
 mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true }, () => {
     console.log('connected to mongodb');
+    
 });
 
 // set path for static assets
