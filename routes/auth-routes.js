@@ -7,6 +7,12 @@ router.get('/login', function(req, res, next) {
     res.render('login', {page:'login', menuId:'login'});
   });
   
+  // auth signup
+
+  router.get('/signup', (req, res) => {
+    res.render('signup', {page:'signup', menuId:'signup'});
+  });
+  
   // auth logout
   router.get('/logout', (req, res) => {
     req.logout();
