@@ -20,8 +20,8 @@
   
               <div class="row">
                 <div class="col-md-5 text-center oauth-links">
-                  <a class="btn btn-danger" href="/auth/google"><b>Login using  <i class="fab fa-google">oogle+</i></b> </a>
-                  <p class="text-justify text-muted margin-top-10">Login with your google account. We will never post anything on your behalf.</p>
+                  <a class="btn btn-danger" href="/auth/google"><b>Log in using  <i class="fab fa-google">oogle</i></b> </a>
+                  <p class="text-justify text-muted margin-top-10">Sign in / Sign up with your google account. We will never post anything on your behalf.</p>
                 </div>
                 <div class="col-md-7 user-form">
                   <form accept-charset="UTF-8" action="/users/login" class="form-horizontal" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="3hJkV8PLPzEwtxLoC7DLp/y8N6alTouFrIjchhPBtWA="></div>
@@ -30,18 +30,25 @@
                         <div class="form-group">
                           <label class="col-lg-3 control-label" for="user_email">Email</label>
                           <div class="col-lg-9">
-                            <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value="" placeholder="Enter your Email">
+                            <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value="">
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-lg-3 control-label" for="user_password">Password</label>
                           <div class="col-lg-9">
-                            <input class="form-control" id="user_password" name="user[password]" type="password" placeholder="Enter your Password">
+                            <input class="form-control" id="user_password" name="user[password]" type="password">
                           </div>
                         </div>
-                        <div><input class="btn btn-primary btn-sm pull-right" name="commit" type="submit" value="Sign in"></div>
+                        <div><input class="btn btn-primary btn-sm pull-right" name="commit" type="submit" value="Signup"></div>
                       </fieldset>
   </form>                <div class="pull-left">
+                    
+      <a href="/auth/signup">Sign up</a><br>
+  
+    <a href="/password">Forgot your password?</a><br>
+  
+    <a href="confirmation">Resend Confirmation Email</a><br>
+  
   
                   </div>
                 </div>

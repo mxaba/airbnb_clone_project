@@ -4,7 +4,7 @@ var logger = require('morgan');
 const cookieSession = require('cookie-session')
 var index = require('./routes/index');
 var authRoutes = require('./routes/auth-routes');
-var profileRoutes = require('./routes/profile-routes');
+var homeRoutes = require('./routes/home-routes');
 const keys = require('./config/keys');
 var passport = require('passport');
 var passportSetup = require('./config/passport');
@@ -14,6 +14,9 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//bodyParser
+app.use(express.urlencoded({extended:false}));
 
 // set up session cookies
 app.use(cookieSession({
@@ -27,6 +30,7 @@ app.use(passport.session());
 
 var publicDir = require('path').join(__dirname,'');
 app.use(express.static(publicDir));
+
 // connect to mongodb
 mongoose.connect(keys.mongodb.dbURI, { useNewUrlParser: true }, () => {
     console.log('connected to mongodb');
@@ -41,7 +45,12 @@ app.use(express.static(path.join(__dirname, 'config')));
 // routes
 app.use('/', index);
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
+app.use('/home', homeRoutes);
+
+
+/*app.get('/', (req, res) => {
+  res.render('index', { user: req.user });
+});*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
