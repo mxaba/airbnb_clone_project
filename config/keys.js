@@ -4,7 +4,7 @@ module.exports = {
         clientSecret: 'fpFbsa4E7Mz5WpPpF5r8h7Li'
     },
     mongodb: {
-        dbURI: 'mongodb+srv://mxaba:5GPZxcKoBxSIPJUl@airbnbdb-yucsr.mongodb.net/test?retryWrites=true'
+        dbURI: 'mongodb+srv://mxaba:2V9Na5Fy7Pnzcnsx@airbnb-yucsr.mongodb.net/test?retryWrites=true'
     },
     session: {
         cookieKey: 'thesegfaultisawesomeiguess'
