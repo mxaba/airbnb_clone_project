@@ -6,6 +6,7 @@ var index = require('./routes/index');
 var authRoutes = require('./routes/auth-routes');
 var homeRoutes = require('./routes/home-routes');
 var dashboard = require('./routes/dashboard');
+var messages = require('./routes/messages');
 const keys = require('./config/keys');
 var passport = require('passport');
 var passportSetup = require('./config/passport');
@@ -45,6 +46,7 @@ app.use('/', index);
 app.use('/auth', authRoutes);
 app.use('/home', homeRoutes);
 app.use('/dashboard', dashboard);
+app.use('/dashboard-messages', messages);
 
 /*app.get('/', (req, res) => {
   res.render('index', { user: req.user });
