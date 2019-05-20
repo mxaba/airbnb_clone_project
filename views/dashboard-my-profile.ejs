@@ -185,7 +185,7 @@
 						
 						<!-- Avatar -->
 						<div class="edit-profile-photo">
-							<img src="images/user-avatar.jpg" alt="">
+							<img src="<%= user.thumbnail %>" alt="">
 							<div class="change-photo-btn">
 								<div class="photoUpload">
 								    <span><i class="fa fa-upload"></i> Upload Photo</span>
@@ -198,16 +198,16 @@
 						<div class="my-profile">
 
 							<label>Your Name</label>
-							<input value="Tom Perrin" type="text">
+							<input value="<%= user.username %>" type="text">
 
 							<label>Phone</label>
-							<input value="010 599 0279" type="text">
+							<input value=" " type="text">
 
 							<label>Email</label>
-							<input value="tom@example.com" type="text">
+							<input value=" " type="text">
 
 							<label>Notes</label>
-							<textarea name="notes" id="notes" cols="30" rows="10">Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper</textarea>
+							<textarea name="notes" id="notes" cols="30" rows="10"> </textarea>
 
 							<label><i class="fa fa-twitter"></i> Twitter</label>
 							<input placeholder="https://www.twitter.com/" type="text">
