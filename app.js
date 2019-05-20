@@ -7,6 +7,9 @@ var authRoutes = require('./routes/auth-routes');
 var homeRoutes = require('./routes/home-routes');
 var dashboard = require('./routes/dashboard');
 var messages = require('./routes/messages');
+var bookings = require('./routes/bookings');
+var wallet = require('./routes/wallet');
+var reviews = require('./routes/reviews');
 const keys = require('./config/keys');
 var passport = require('passport');
 var passportSetup = require('./config/passport');
@@ -47,6 +50,9 @@ app.use('/auth', authRoutes);
 app.use('/home', homeRoutes);
 app.use('/dashboard', dashboard);
 app.use('/dashboard-messages', messages);
+app.use('/dashboard-bookings', bookings);
+app.use('/dashboard-wallet', wallet);
+app.use('/dashboard-reviews', reviews);
 
 /*app.get('/', (req, res) => {
   res.render('index', { user: req.user });

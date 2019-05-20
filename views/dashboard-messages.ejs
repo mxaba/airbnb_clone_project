@@ -32,8 +32,8 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<a href="index"><img src="images/logo.png" alt=""></a>
-					<a href="index" class="dashboard-logo"><img src="images/logo2.png" alt=""></a>
+					<a href="home"><img src="images/logo.png" alt=""></a>
+					<a href="home" class="dashboard-logo"><img src="images/logo2.png" alt=""></a>
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -55,39 +55,7 @@
 							</ul>
 						</li>
 
-						<li><a href="#">Listings</a>
-							<ul>
-								<li><a href="#">List Layout</a>
-									<ul>
-										<li><a href="listings-list-with-sidebar">With Sidebar</a></li>
-										<li><a href="listings-list-full-width">Full Width</a></li>
-										<li><a href="listings-list-full-width-with-map">Full Width + Map</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Grid Layout</a>
-									<ul>
-										<li><a href="listings-grid-with-sidebar-1">With Sidebar 1</a></li>
-										<li><a href="listings-grid-with-sidebar-2">With Sidebar 2</a></li>
-										<li><a href="listings-grid-full-width">Full Width</a></li>
-										<li><a href="listings-grid-full-width-with-map">Full Width + Map</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Half Screen Map</a>
-									<ul>
-										<li><a href="listings-half-screen-map-list">List Layout</a></li>
-										<li><a href="listings-half-screen-map-grid-1">Grid Layout 1</a></li>
-										<li><a href="listings-half-screen-map-grid-2">Grid Layout 2</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Single Listings</a>
-									<ul>
-										<li><a href="listings-single-page">Single Listing 1</a></li>
-										<li><a href="listings-single-page-2">Single Listing 2</a></li>
-										<li><a href="listings-single-page-3">Single Listing 3</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
+						<li><a href="#">Listings</a></li>
 
 						<li><a class="current" href="#">User Panel</a>
 							<ul>
@@ -102,44 +70,7 @@
 								<li><a href="dashboard-my-profile">My Profile</a></li>
 								<li><a href="dashboard-invoice">Invoice</a></li>
 							</ul>
-						</li>
-
-						<li><a href="#">Pages</a>
-							<div class="mega-menu mobile-styles three-columns">
-
-									<div class="mega-menu-section">
-										<ul>
-											<li class="mega-menu-headline">Pages #1</li>
-											<li><a href="pages-user-profile"><i class="sl sl-icon-user"></i> User Profile</a></li>
-											<li><a href="pages-booking"><i class="sl sl-icon-check"></i> Booking Page</a></li>
-											<li><a href="pages-add-listing"><i class="sl sl-icon-plus"></i> Add Listing</a></li>
-											<li><a href="pages-blog"><i class="sl sl-icon-docs"></i> Blog</a></li>
-										</ul>
-									</div>
-		
-									<div class="mega-menu-section">
-										<ul>
-											<li class="mega-menu-headline">Pages #2</li>
-											<li><a href="pages-contact"><i class="sl sl-icon-envelope-open"></i> Contact</a></li>
-											<li><a href="pages-coming-soon"><i class="sl sl-icon-hourglass"></i> Coming Soon</a></li>
-											<li><a href="pages-404"><i class="sl sl-icon-close"></i> 404 Page</a></li>
-											<li><a href="pages-masonry-filtering"><i class="sl sl-icon-equalizer"></i> Masonry Filtering</a></li>
-										</ul>
-									</div>
-
-									<div class="mega-menu-section">
-										<ul>
-											<li class="mega-menu-headline">Other</li>
-											<li><a href="pages-elements"><i class="sl sl-icon-settings"></i> Elements</a></li>
-											<li><a href="pages-pricing-tables"><i class="sl sl-icon-tag"></i> Pricing Tables</a></li>
-											<li><a href="pages-typography"><i class="sl sl-icon-pencil"></i> Typography</a></li>
-											<li><a href="pages-icons"><i class="sl sl-icon-diamond"></i> Icons</a></li>
-										</ul>
-									</div>
-									
-							</div>
-						</li>
-						
+						</li>						
 					</ul>
 				</nav>
 				<div class="clearfix"></div>
@@ -155,12 +86,12 @@
 					
 					<!-- User Menu -->
 					<div class="user-menu">
-						<div class="user-name"><span><img src="<%= user.thumbnail %>"" alt=""></span>Hi, <%= user.username %>!</div>
+						<div class="user-name"><span><img src="<%= user.thumbnail %>" alt=""></span>Hi, <%= user.username %>!</div>
 						<ul>
 							<li><a href="dashboard"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
 							<li><a href="dashboard-messages"><i class="sl sl-icon-envelope-open"></i> Messages</a></li>
 							<li><a href="dashboard-bookings"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
-							<li><a href="index"><i class="sl sl-icon-power"></i> Logout</a></li>
+							<li><a href="/auth/logout"><i class="sl sl-icon-power"></i> Logout</a></li>
 						</ul>
 					</div>
 

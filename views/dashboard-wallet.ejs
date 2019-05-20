@@ -49,15 +49,9 @@
 				<nav id="navigation" class="style-1">
 					<ul id="responsive">
 
-						<li><a href="#">Home</a>
-							<ul>
-								<li><a href="home">Home</a></li>
-							</ul>
-						</li>
+						<li><a href="home">Home</a></li>
 
-						<li><a href="#">Listings</a>
-							
-						</li>
+						<li><a href="#">Listings</a></li>
 
 						<li><a class="current" href="#">User Panel</a>
 							<ul>
@@ -88,7 +82,7 @@
 					
 					<!-- User Menu -->
 					<div class="user-menu">
-						<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>Hi, Tom!</div>
+						<div class="user-name"><span><img src="<%= user.thumbnail %>" alt=""></span><%= user.username %></div>
 						<ul>
 							<li><a href="dashboard"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
 							<li><a href="dashboard-messages"><i class="sl sl-icon-envelope-open"></i> Messages</a></li>
@@ -120,7 +114,7 @@
 
 	<!-- Responsive Navigation Trigger -->
 	<a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
-	
+
 	<div class="dashboard-nav">
 		<div class="dashboard-nav-inner">
 
@@ -128,7 +122,7 @@
 				<li><a href="dashboard"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
 				<li><a href="dashboard-messages"><i class="sl sl-icon-envelope-open"></i> Messages <span class="nav-tag messages">2</span></a></li>
 				<li><a href="dashboard-bookings"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
-				<li><a href="dashboard-wallet"><i class="sl sl-icon-wallet"></i> Wallet</a></li>
+				<li class="active"><a href="dashboard-wallet"><i class="sl sl-icon-wallet"></i> Wallet</a></li>
 			</ul>
 			
 			<ul data-submenu-title="Listings">
@@ -145,11 +139,11 @@
 			</ul>	
 
 			<ul data-submenu-title="Account">
-				<li class="active"><a href="dashboard-my-profile"><i class="sl sl-icon-user"></i> My Profile</a></li>
+				<li><a href="dashboard-my-profile"><i class="sl sl-icon-user"></i> My Profile</a></li>
 				<li><a href="/auth/logout"><i class="sl sl-icon-power"></i> Logout</a></li>
 			</ul>
-
-	</div>
+			
+		</div>
 	</div>
 	<!-- Navigation / End -->
 
@@ -162,99 +156,124 @@
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>My Profile</h2>
+					<h2>Wallet</h2>
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
-							<li><a href="/home">Home</a></li>
-							<li><a href="/dashboard">Dashboard</a></li>
-							<li>My Profile</li>
+							<li><a href="#">Home</a></li>
+							<li>Dashboard</li>
+							<li>Wallet</li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 
+		<!-- Content -->
 		<div class="row">
 
-			<!-- Profile -->
+			<!-- Item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="dashboard-stat color-1">
+					<div class="dashboard-stat-content wallet-totals"><h4>84.50</h4> <span>Withdrawable Balance <strong class="wallet-currency">ZAR</strong></span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Money-2"></i></div>
+				</div>
+			</div>
+			<!-- Item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="dashboard-stat color-3">
+					<div class="dashboard-stat-content wallet-totals"><h4>245.15</h4> <span>Total Earnings <strong class="wallet-currency">ZAR</strong></span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Money-Bag"></i></div>
+				</div>
+			</div>
+
+			<!-- Item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="dashboard-stat color-2">
+					<div class="dashboard-stat-content"><h4>3</h4> <span>Total Orders</span></div>
+					<div class="dashboard-stat-icon"><i class="im im-icon-Shopping-Cart"></i></div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			
+			<!-- Invoices -->
 			<div class="col-lg-6 col-md-12">
-				<div class="dashboard-list-box margin-top-0">
-					<h4 class="gray">Profile Details</h4>
-					<div class="dashboard-list-box-static">
+				<div class="dashboard-list-box invoices with-icons margin-top-20">
+					<h4>Earnings <div class="comission-taken">Fee: <strong>15%</strong></div></h4>
+					<ul>
 						
-						<!-- Avatar -->
-						<div class="edit-profile-photo">
-							<img src="images/user-avatar.jpg" alt="">
-							<div class="change-photo-btn">
-								<div class="photoUpload">
-								    <span><i class="fa fa-upload"></i> Upload Photo</span>
-								    <input type="file" class="upload" />
-								</div>
-							</div>
-						</div>
-	
-						<!-- Details -->
-						<div class="my-profile">
+						<li><i class="list-box-icon sl sl-icon-basket"></i>
+							<strong>Sunway Apartment</strong>
+							<ul>
+								<li class="paid">R99.00</li>
+								<li class="unpaid">Fee: R14.50</li>
+								<li class="paid">Net Earning: <span>R84.50</span></li>
+								<li>Order: #00124</li>
+								<li>Date: 01/02/2019</li>
+							</ul>
+						</li>
+						
+						<li><i class="list-box-icon sl sl-icon-basket"></i>
+							<strong>Sunway Apartment</strong>
+							<ul>
+								<li class="paid">R67.00</li>
+								<li class="unpaid">Fee: R10.05</li>
+								<li class="paid">Net Earning: <span>R56.95</span></li>
+								<li>Order: #00123</li>
+								<li>Date: 22/01/2019</li>
+							</ul>
+						</li>
+						
+						<li><i class="list-box-icon sl sl-icon-basket"></i>
+							<strong>Sunway Apartment</strong>
+							<ul>
+								<li class="paid">R122.00</li>
+								<li class="unpaid">Fee: R18.30</li>
+								<li class="paid">Net Earning: <span>R103.70</span></li>
+								<li>Order: #00122</li>
+								<li>Date: 18/01/2019</li>
+							</ul>
+						</li>
 
-							<label>Your Name</label>
-							<input value="Tom Perrin" type="text">
-
-							<label>Phone</label>
-							<input value="010 599 0279" type="text">
-
-							<label>Email</label>
-							<input value="tom@example.com" type="text">
-
-							<label>Notes</label>
-							<textarea name="notes" id="notes" cols="30" rows="10">Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper</textarea>
-
-							<label><i class="fa fa-twitter"></i> Twitter</label>
-							<input placeholder="https://www.twitter.com/" type="text">
-
-							<label><i class="fa fa-facebook-square"></i> Facebook</label>
-							<input placeholder="https://www.facebook.com/" type="text">
-
-							<label><i class="fa fa-google-plus"></i> Google+</label>
-							<input placeholder="https://www.google.com/" type="text">
-						</div>
-	
-						<button class="button margin-top-15">Save Changes</button>
-
-					</div>
+					</ul>
 				</div>
 			</div>
-
-			<!-- Change Password -->
+						
+			<!-- Invoices -->
 			<div class="col-lg-6 col-md-12">
-				<div class="dashboard-list-box margin-top-0">
-					<h4 class="gray">Change Password</h4>
-					<div class="dashboard-list-box-static">
-
-						<!-- Change Password -->
-						<div class="my-profile">
-							<label class="margin-top-0">Current Password</label>
-							<input type="password">
-
-							<label>New Password</label>
-							<input type="password">
-
-							<label>Confirm New Password</label>
-							<input type="password">
-
-							<button class="button margin-top-15">Change Password</button>
-						</div>
-
-					</div>
+				<div class="dashboard-list-box invoices with-icons margin-top-20">
+					<h4>Payout History</h4>
+					<ul>
+						
+						<li><i class="list-box-icon sl sl-icon-wallet"></i>
+							<strong>R84.50</strong>
+							<ul>
+								<li class="unpaid">Unpaid</li>
+								<li>Period: 02/2019</li>
+							</ul>
+						</li>
+								
+						<li><i class="list-box-icon sl sl-icon-wallet"></i>
+							<strong>R189.20</strong>
+							<ul>
+								<li class="paid">Paid</li>
+								<li>Period: 01/2019</li>
+							</ul>
+						</li>
+		
+					</ul>
 				</div>
 			</div>
+			
 
 
 			<!-- Copyrights -->
 			<div class="col-md-12">
 				<div class="copyrights">© 2019 Airbnb. All Rights Reserved.</div>
 			</div>
-
 		</div>
 
 	</div>
