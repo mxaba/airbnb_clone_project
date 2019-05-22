@@ -20,7 +20,7 @@ router.get('/login', function(req, res, next) {
   
   // auth with google+
   router.get('/google', passport.authenticate('google', {
-    scope: ['profile']
+    scope: ['email']
   }));
   
   // callback route for google to redirect to

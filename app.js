@@ -11,6 +11,7 @@ var bookings = require('./routes/bookings');
 var wallet = require('./routes/wallet');
 var reviews = require('./routes/reviews');
 var profile = require('./routes/profile');
+var listing = require('./routes/listing');
 const keys = require('./config/keys');
 var passport = require('passport');
 var passportSetup = require('./config/passport');
@@ -55,6 +56,7 @@ app.use('/dashboard-bookings', bookings);
 app.use('/dashboard-wallet', wallet);
 app.use('/dashboard-reviews', reviews);
 app.use('/dashboard-my-profile', profile);
+app.use('/dashboard-add-listing', listing);
 
 /*app.get('/', (req, res) => {
   res.render('index', { user: req.user });
