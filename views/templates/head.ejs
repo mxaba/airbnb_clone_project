@@ -1,0 +1,231 @@
+<meta charset="UTF-8">
+<title>Segfault'BNB</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/login.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width : 100%;
+  background-image:  url('http://www.metronetrail.com/wp-content/uploads/2017/11/designer-wallpapers-HD5-1.jpg');
+background-size: cover;
+background-position: center;
+color: black;
+
+}
+   .btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+   .btn-labeled {padding-top: 0;padding-bottom: 0;}
+   .btn { margin-bottom:10px; }
+
+
+
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+.title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+    width: 650px;
+}
+
+.card > .left {
+    background-image: url('https://66.media.tumblr.com/a5fbef27225d75f3ad7a3626cd87a989/tumblr_p6j4lhcLWr1qzwmsso1_1280.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+.card > .right {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+form {
+    width: 100%;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.form-input > label {
+    color: #2C3A47;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.form-input > input[type="text"]:focus + label,
+.form-input > input[type="password"]:focus + label {
+    color: #FD7272;
+}
+
+form input {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-input > input[type="text"],
+.form-input > input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #2C3A47;
+    height: 30px;
+    outline: none;
+    transition: border-bottom .3s ease-in-out;
+}
+
+.form-input > input[type="text"]:focus,
+.form-input > input[type="password"]:focus {
+    border-bottom: 2px solid #FD7272;
+}
+
+.btn1 {
+  background-color: #2C3A47;
+  padding-right: 20%;
+  text-align: center;
+  color: #FFF;
+}
+
+.btn {
+    background-color: #2C3A47;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    transition: background-color 0.3s ease-in-out,
+                box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #FD7272;
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    transform: translateY(-3px);
+}
+
+.forgot-password {
+    color: #000;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: letter-spacing .3s ease-in-out;
+}
+
+.forgot-password:hover {
+  letter-spacing: 1px;
+}
+
+
+/* bookings */
+
+body {
+  font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+  margin: 12px 0;
+}
+.car-container {
+  cursor: pointer;
+  height: 500px;
+  perspective: 600;
+  position: relative;
+  width: 560px;
+}
+.car {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.car:hover {
+  transform: rotateY(180deg);
+}
+.car .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.car .back {
+  background: white;
+  color: black;
+  line-height: 150px;
+  text-align: center;
+	transform: rotateY(180deg);
+	font-size: 1.5em;
+}
+/* index cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+
+.board {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.board1 {
+  background-color: white;
+}
+</style>

@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <i class="fab fa-drupal">Segfault</i>
+          </a>
+      </div>
+
+      <ul class="nav navbar-nav">
+          <% if (currentUser) { %>
+          <li><a href="/listings/new"><i class="fas fa-plus"> Add new space</i></a></li>
+          <li><a href="/bookings"><i class="fas fa-book"> Bookings</i></a></li>
+          <% } %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if (currentUser) { %>
+          <li><a href="/edit"><span class="glyphicon glyphicon-user"></span> Edit</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= currentUser.name %> </a></li>
+          <li><a href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <%} else {%>
+          <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% } %>
+      </ul>
+  </div>
+</nav>
