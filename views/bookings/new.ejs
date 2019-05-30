@@ -1,0 +1,21 @@
+<% layout('../layout') -%>
+<div class="container">
+  <div class="starter-template">
+
+    <h1><%= listing.name %></h1>
+    <h3>You've chosen the following item and the price is R <%= listing.price %></h3>
+    <div class="car-container">
+        <div class="car">
+          <div class="side"><img src="<%= listing.image %>" alt="house image"></div>
+          <div class="side back"><%= listing.name %><br>
+            <%= listing.description%><br>
+            Available on: <%= new Date(listing.available).toDateString() %><br><br></div>
+        </div>
+      </div>    
+    <div>
+        <form action="/bookings/new" method="post">
+          <input type="submit" value="Click here to book" class="btn btn-label btn-info" ></input>
+        </form>
+    </div>
+  </div>
+</div>
