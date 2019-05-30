@@ -23,13 +23,17 @@ Until a user has confirmed a booking request, that space can still be booked for
 - Bootstrap
 
 # Project timeline:
-Mon - agree on technologies / mock up plan / + research
-Tue - research + setting up DB, back end working DB by the end of the day
-Wed - back end / set up / working back end by the end of the day
-Thu - front end stuff basic version online
-To-dos:
-Pick DB technology (research needed)
-Work out how to use GitHub for group projects
-Express play-around (as a technology alternative to Sinatra)
+- Mon - agree on technologies / mock up plan / + research
+- Tue - research + setting up DB, back end working DB by the end of the day
+- Wed - back end / set up / working back end by the end of the day
+- Thu - front end stuff basic version online
+
 
 # Platforms 
+
+# To-List:
+* Pick DB technology (research needed)
+* Work out how to use GitHub for group projects
+* Express play-around (as a technology alternative to Sinatra)
+* Rating part on the client side
+* Adding the fetures we promised to the client
