@@ -3,6 +3,10 @@ clone project By Segfault (Team project) The goal is to reproduce AirBnB functio
 
 > members : 😀Lsibanda,🙃Gkganakg, 😉Kmoketo and 😎Mxaba.
 
+# How to install
+- git clone https://github.com/mxaba/airbnb_clone_project.git
+- To install dependencies *run* npm install 
+
 # Headline specifications:
 Any signed-up user can list a new space.
 Users can list multiple spaces.
@@ -31,9 +35,9 @@ Until a user has confirmed a booking request, that space can still be booked for
 
 # Platforms 
 
-# To-List:
+# To-Do-List:
 * Pick DB technology (research needed)
 * Work out how to use GitHub for group projects
-* Express play-around (as a technology alternative to Sinatra)
+* Express play-around
 * Rating part on the client side
 * Adding the fetures we promised to the client
