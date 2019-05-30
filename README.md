@@ -31,3 +31,5 @@ To-dos:
 Pick DB technology (research needed)
 Work out how to use GitHub for group projects
 Express play-around (as a technology alternative to Sinatra)
+
+# Platforms 
